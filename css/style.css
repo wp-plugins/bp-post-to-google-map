@@ -1,0 +1,14 @@
+/* CSS Document */
+
+#bpmap-canvas { position:relative; padding-bottom: 75%; height: 0; overflow: hidden;}
+#bpmap-canvas iframe {position: absolute; top: 0; left: 0; width: 100% !important; height: 100% !important;}
+
+#bpInfowindow a {text-decoration:none; border-bottom: none;}
+#bpInfowindow h2 {font-size: 2rem; text-align: center; margin: 5px auto;}
+#bpInfowindow img {width: 95%; height: auto; display: block; margin: auto;}
+
+#bpInfowindow.rside img{width: 40%;	float:left;	margin: 0 10px 10px 0;}
+#bpInfowindow.rside div {float: right;  width: 58%;}
+
+
+

@@ -1,0 +1,37 @@
+/* CSS Document */
+#bpwrap{}
+form#bpform {
+  width: 55%;
+}
+.bpform-table{
+	width: 100%;
+}
+.bpform-table tr th{
+	text-align:left;
+	  width: 20%;
+	height: 40px;
+}
+
+
+#bpinfo{
+	float: right;
+	width: 35%;
+	background-color: #fff;	
+	padding: 10px 10px 10px 30px;
+	margin-right: 20px;
+	border: solid 1px #3CF;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+ul {
+  list-style: inherit;
+  padding-left: 20px;
+}
+ul li {
+  list-style-position: outside;
+}
+ul li ul{
+	padding-left: 20px;
+}
