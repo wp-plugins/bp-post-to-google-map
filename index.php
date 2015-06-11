@@ -8,7 +8,7 @@
 
  * Description: Adds geocoding to Posts to display on Google Map.
 
- * Version: 1.0
+ * Version: 1.1
 
  * Author: Diane Ensey
 
