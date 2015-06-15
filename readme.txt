@@ -10,7 +10,7 @@ Requires at least: 4.0
 
 Tested up to: 4.2.1
 
-Stable tag: 1.1
+Stable tag: 1.2
 
 License: GPLv2 or later
 
@@ -131,6 +131,10 @@ The map will expand to the width of the container it is in, usually the Page or 
 
 
 == Changelog ==
+
+= 1.2 =
+
+* Fix Infowindow links
 
 = 1.1 =
 

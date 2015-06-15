@@ -8,7 +8,7 @@
 
  * Description: Adds geocoding to Posts to display on Google Map.
 
- * Version: 1.1
+ * Version: 1.2
 
  * Author: Diane Ensey
 
@@ -250,13 +250,13 @@ $query = new WP_Query( $args );
 
 		$t['title'] = get_the_title();
 
-		$opts['title'] ? $title = "<a href=".get_permalink()."'>".get_the_title()."</a>" : $title='';
+		$opts['title'] ? $title = "<a href='".get_permalink()."'>".get_the_title()."</a>" : $title='';
 
 		$opts['featured'] ? $feat = get_the_post_thumbnail( get_the_ID(), 'thumb') : $feat='';
 
 		$opts['excerpt'] ? $exc = get_the_excerpt() : $exc = '';
 
-		$opts['readmore'] ? $rm = "<a href=".get_permalink()."'>Read More...</a>" : $rm = '';
+		$opts['readmore'] ? $rm = "<a href='".get_permalink()."'>Read More...</a>" : $rm = '';
 
 		if(isset($opts['class']) && $opts['class'] == '1'){$class = 'rside';}else{$class = '';}
 
