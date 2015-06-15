@@ -68,7 +68,7 @@ function loadMap() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
-      '&signed_in=true&callback=initMap';
+      '&signed_in=false&callback=initMap';
   document.body.appendChild(script);
 }
 
