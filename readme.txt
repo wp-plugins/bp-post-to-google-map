@@ -10,7 +10,7 @@ Requires at least: 4.0
 
 Tested up to: 4.2.1
 
-Stable tag: 1.2
+Stable tag: /trunk/
 
 License: GPLv2 or later
 
@@ -131,6 +131,12 @@ The map will expand to the width of the container it is in, usually the Page or 
 
 
 == Changelog ==
+
+= 1.3 =
+
+* Don't delete settings if premium plugin is installed
+* Update settings page.
+* Override "posts per page" so all markers are shown.
 
 = 1.2 =
 

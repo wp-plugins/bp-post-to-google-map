@@ -8,7 +8,7 @@
 
  * Description: Adds geocoding to Posts to display on Google Map.
 
- * Version: 1.2
+ * Version: 1.3
 
  * Author: Diane Ensey
 
@@ -111,22 +111,23 @@ function bp_map_post_install() {
 //Remove options on uninstallation
 
 function bp_map_post_uninstall(){
-
-	delete_option( 'bp_map_settings[title]');
-
-	delete_option( 'bp_map_settings[featured]');
-
-	delete_option( 'bp_map_settings[class]');
-
-	delete_option( 'bp_map_settings[excerpt]');
-
-	delete_option( 'bp_map_settings[readmore]');
-
-	delete_option( 'bp_map_settings[centerlat]');
-
-	delete_option( 'bp_map_settings[centerlng]');
-
-	delete_option( 'bp_map_settings[zoom]');
+if ( !is_plugin_active( 'bp-post-to-google-map-premium/bp-post-to-google-map-premium.php' ) ) {
+		delete_option( 'bp_map_settings[title]');
+	
+		delete_option( 'bp_map_settings[featured]');
+	
+		delete_option( 'bp_map_settings[class]');
+	
+		delete_option( 'bp_map_settings[excerpt]');
+	
+		delete_option( 'bp_map_settings[readmore]');
+	
+		delete_option( 'bp_map_settings[centerlat]');
+	
+		delete_option( 'bp_map_settings[centerlng]');
+	
+		delete_option( 'bp_map_settings[zoom]');
+} 
 
 }
 
@@ -232,7 +233,8 @@ $args = array(
 
 	'meta_compare' => '=',
 
-	'post_type' => 'post'
+	'post_type' => 'post',
+	'posts_per_page'=>-1
 
 );
 
@@ -243,6 +245,7 @@ $query = new WP_Query( $args );
 	$a = array();
 
 	$t = array();
+
 
 	
 
@@ -367,52 +370,29 @@ function bp_map_options_do_page() {
 	?>
 
     <div class="bpwrap">
-
         <h2>BP Post to Google Map Settings</h2>
-
                     <div id="bpinfo">
-
             	<h3>Like This Plugin?</h3>
-
-                <p>Please review it in the WordPress Plugin Repository.</p>
-
-                <p>A Pro version of this plugin is coming soon, featuring:</p>
-
+                <p>Please review it in the <a href="https://wordpress.org/plugins/bp-post-to-google-map/">WordPress Plugin Repository</a>.</p>
+                <p>A Pro version of this plugin is now available.  It features:</p>
                 	<ul>
-
-                    	<li>Lat/Lng from Address on Post pages</li>
-
-                        <li>Custom Map Markers</li>
-
-                        <li>Assign Map Marker by Post</li>
-
+                    	<li>Geocoding - generate the Lat/Lng from a street address</li>
+                        <li>Custom Map Markers - Use one of the 91 markers built in or upload your own!</li>
+                        <li>Assign Map Marker by Post - Assign a custom map marker for each post.</li>
                         <li>Display Maps by Category</li>
-
-                        <li>More customization for the Infowindow (map popup)</li>
-
                         </ul>
-
-                  <p>Interested? Have feature requests? Be the first to get access by emailing me at <a href="diane@beyond-paper.com">diane@beyond-paper.com</a>. </p>
-
-                <p>Check out my other plugin:
-
+                  <p><a href="http://beyond-paper.com/downloads/bp-post-to-google-map-premium/">Upgrade at Beyond Paper</a>!<br /><em>Note: do not uninstall/delete this plugin before reading the installation instructions for the premium version!</em></p>
+                <p>Check all of my plugins:
                 	<ul>
-
-                    	<li><a href="http://bit.ly/1LDwbeD">BP Expire Category</a> - Removes post from a category on the date you choose.</li>
-
+                    	<li><a href="http://beyond-paper.com/downloads/bp-expire-category/">BP Expire Category</a> - Removes post from a category on the date you choose.</li>
+                        <li><a href="http://beyond-paper.com/downloads/bp-pretty-quote/">BP Pretty Quote</a> - Shortcodes for adding nicely formatted quote blocks</a>
+                        <li><a href="http://beyond-paper.com/downloads/bp-post-to-google-map/">BP Post to Google Map</a> - Free plugin that adds coords to Posts so they can be displayed on a Google Map</a>
+                        <li><a href="http://beyond-paper.com/downloads/bp-post-to-google-map-premium/">BP Post to Google Map Premium</a> - Custom markers, geocoding and more!</a>
                     </ul>
-
                 </p>
-
                 <p><a href="http://beyond-paper.com/blog/">My blog</a> features information on WordPress, content marketing, SEO and small business.</p>
-
                 <p>Need a custom plugin or help with your site?  Email me at <a href="diane@beyond-paper.com">diane@beyond-paper.com</a></p>
-
             </div>
-
-
-
-        
 
         <form id="bpform" method="post" action="options.php">
 
